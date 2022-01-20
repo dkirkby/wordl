@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORDL</title>
+</head>
+<body>
+    <div id="observablehq-newGame-8c55cbff"></div>
+    <div id="observablehq-display-8c55cbff"></div>
+    <div id="observablehq-partion-8c55cbff"></div>
+    <div id="observablehq-viewof-zoom-8c55cbff"></div>
+    <p>Credit: <a href="https://observablehq.com/@dkirkby/wordle">Wordle by David Kirkby</a></p>
+    
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@dkirkby/wordle.js?v=3";
+    new Runtime().module(define, name => {
+      if (name === "newGame") return new Inspector(document.querySelector("#observablehq-newGame-8c55cbff"));
+      if (name === "display") return new Inspector(document.querySelector("#observablehq-display-8c55cbff"));
+      if (name === "partion") return new Inspector(document.querySelector("#observablehq-partion-8c55cbff"));
+      if (name === "viewof zoom") return new Inspector(document.querySelector("#observablehq-viewof-zoom-8c55cbff"));
+    });
+    </script>
+</body>
+</html>
