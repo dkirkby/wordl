@@ -8,17 +8,19 @@
 </head>
 <body>
     
-    <div id="observablehq-newGame-73ffac08"></div>
-    <div id="observablehq-display-73ffac08"></div>
-    <div id="observablehq-viewof-keyboard-73ffac08"></div>
+    <div id="observablehq-display-bcedc63c"></div>
+    <div id="observablehq-viewof-keyboard-bcedc63c"></div>
+    <div id="observablehq-progress-bcedc63c"></div>
+    <div id="observablehq-newGame-bcedc63c"></div>
 
     <script type="module">
         import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
         import define from "https://api.observablehq.com/@dkirkby/wordle.js?v=3";
         new Runtime().module(define, name => {
-          if (name === "display") return new Inspector(document.querySelector("#observablehq-display-73ffac08"));
-          if (name === "viewof keyboard") return new Inspector(document.querySelector("#observablehq-viewof-keyboard-73ffac08"));
-          if (name === "newGame") return new Inspector(document.querySelector("#observablehq-newGame-73ffac08"));
+          if (name === "display") return new Inspector(document.querySelector("#observablehq-display-bcedc63c"));
+          if (name === "viewof keyboard") return new Inspector(document.querySelector("#observablehq-viewof-keyboard-bcedc63c"));
+          if (name === "progress") return new Inspector(document.querySelector("#observablehq-progress-bcedc63c"));
+          if (name === "newGame") return new Inspector(document.querySelector("#observablehq-newGame-bcedc63c"));
           return ["gameGrid"].includes(name);
         });
     </script>
