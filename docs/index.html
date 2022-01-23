@@ -8,6 +8,7 @@
 </head>
 <body>
     
+    <div id="observablehq-loading-b1241cc9"></div>
     <div id="observablehq-display-bcedc63c"></div>
     <div id="observablehq-viewof-keyboard-bcedc63c"></div>
     <div id="observablehq-progress-bcedc63c"></div>
@@ -21,6 +22,7 @@
           if (name === "viewof keyboard") return new Inspector(document.querySelector("#observablehq-viewof-keyboard-bcedc63c"));
           if (name === "progress") return new Inspector(document.querySelector("#observablehq-progress-bcedc63c"));
           if (name === "newGame") return new Inspector(document.querySelector("#observablehq-newGame-bcedc63c"));
+          if (name === "loading") return new Inspector(document.querySelector("#observablehq-loading-b1241cc9"));
           return ["gameGrid"].includes(name);
         });
     </script>
